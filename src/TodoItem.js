@@ -1,11 +1,30 @@
 import React  from "react";
 
 function TodoItem(props){
+    
+    let aqio = () => {
+        alert('aqui completamos ' + props.text)
+    } 
+    
+    
     return(
+
         <section className="TodoItem-section">
-            <p>
-              Esta es una TODO {props.text}
-            </p>
+            <span 
+            className='Todoitem-span Todoitem-span2'
+            onClick={() => {aqio()}}
+            >c
+            </span>
+
+                <p>
+                Esta es una TODO {props.text}
+                </p>
+
+            <span
+            className='Todoitem-span Todoitem-span2'
+            onClick={() => {aqio()}}
+            >x
+            </span>
         </section>
             
 

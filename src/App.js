@@ -9,9 +9,9 @@ import { CreateTodoButton } from './CreateTodoButton'
 
 const todos = [
   {text: 'The Last Of us', image:'', compañia:'Playstation' ,completed: false},
-  {text: 'The Last Of us', image:'', compañia:'' ,completed: false},
-  {text: 'The Last Of us', image:'', compañia:'' ,completed: false},
-  {text: 'The Last Of us', image:'', compañia:'' ,completed: false},
+  {text: 'Cyberpunk', image:'', compañia:'' ,completed: false},
+  {text: 'Zelda breath of the wild', image:'', compañia:'' ,completed: false},
+  {text: 'Zelda okarine of time', image:'', compañia:'' ,completed: false},
 ]
 
 function App(){
