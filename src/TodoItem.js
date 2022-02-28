@@ -12,7 +12,7 @@ function TodoItem(props){
         <section className="TodoItem-section">
             <span 
             className='Todoitem-span Todoitem-span2'
-            onClick={() => {aqio()}}
+            onClick={props.onComplete}
             >c
             </span>
 

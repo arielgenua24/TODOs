@@ -1,13 +1,11 @@
 import React from 'react';
 
-function TodoSearch() {
+function TodoSearch({searchValue, setSearchValue}) {
 
-    let [state,newState] =  React.useState('juan')
-
-
+    
     let onSearchValue = (event) => {
         const searchedValue = event.target.value
-        newState(searchedValue)
+        setSearchValue(searchedValue)
     }
 
 
@@ -19,7 +17,7 @@ function TodoSearch() {
         
         />,
 
-        <p>{state}</p>
+        <p>{searchValue}</p>
     ]
 };
 
