@@ -15,16 +15,12 @@ function TodoItem(props){
             onClick={props.onComplete}
             >c
             </span>
+            <p>
+              {props.text}
+            </p>
 
-                <p>
-                Esta es una TODO {props.text}
-                </p>
+            <img src={props.image} alt="UserImage"></img>
 
-            <span
-            className='Todoitem-span Todoitem-span2'
-            onClick={() => {aqio()}}
-            >x
-            </span>
         </section>
             
 
