@@ -20,7 +20,7 @@ function TodoForm(){
         addTodos(newTodoValue,interest,image)
         setOpenModal(false)
         
-        console.warn("all data", interest)
+        console.warn("all data", image)
     }
 
    
@@ -49,11 +49,10 @@ function TodoForm(){
                 </select>
 
                 <input 
-                    type='file' 
                     value={image} 
                     placeholder="ej https://image.api.playstation.com/vulcan/ap/rnd/202008/1318/8XGEPtD1xoasK0FYkYNcCn1z.png" 
                     onChange={(e)=>
-                    { const newGameImage = e.target.files;
+                    { const newGameImage = e.target.value;
                     setImage(newGameImage) }
                 }> 
                 </input>

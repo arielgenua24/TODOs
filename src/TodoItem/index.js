@@ -2,10 +2,6 @@ import React  from "react";
 
 function TodoItem(props){
     
-    let aqio = () => {
-        alert('aqui completamos ' + props.text)
-    } 
-    
     
     return(
 
@@ -19,7 +15,9 @@ function TodoItem(props){
               {props.text}
             </p>
 
-            <img src={props.image} alt="UserImage"></img>
+            
+
+        <img src={props.image} alt="UserImage"></img>
 
         </section>
             
