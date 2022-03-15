@@ -32,6 +32,7 @@ function AppUI() {
         <TodoList>     
             {searchedTodos?.map(todo => (
             <TodoItem
+                interest={todo.interest}
                 image={todo.image}
                 key={todo.text}
                 text={todo.text}

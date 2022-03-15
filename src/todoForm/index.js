@@ -6,6 +6,10 @@ function TodoForm(){
     const {addTodos,setOpenModal} = React.useContext(TodoContext)
     const [interest,setInterest] = React.useState('Otros')
     const [image,setImage] = React.useState('')
+    let userInterest ;
+
+
+
 
     const onChange = (event) => {
         setNewTodoValue(event.target.value)
@@ -15,11 +19,27 @@ function TodoForm(){
         setOpenModal(false)
     }
 
+    /*const changeBckgByValue = (interestIn) => {
+        console.log('vegetta')
+        console.log(interestIn)
+        console.log(interest)
+
+        console.log(interest === interestIn) 
+        let section = document.getElementsByClassName("TodoItem-section")
+        if(interestIn === 'Nintendo') {
+            section.style.backgroundColor = "red";
+        } else {
+            section.style.backgroundColor = "black";
+        } 
+   } */
+
+
+
     const onSubmit = (event) => {
         event.preventDefault();
         addTodos(newTodoValue,interest,image)
         setOpenModal(false)
-        
+
         console.warn("all data", image)
     }
 
@@ -38,8 +58,8 @@ function TodoForm(){
                 />
 
                 <select onChange={(e)=>{
-                    const userInterest = e.target.value;
-                    setInterest(userInterest)
+                    userInterest = e.target.value;
+                    setInterest(userInterest);
                 }}>
                     <option value='otros'selected>Otros</option>
                     <option value='Nintendo' >Nintendo</option>

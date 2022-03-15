@@ -30,15 +30,24 @@ body {
 }
 
 .TodoItem-section {
-  background-color: aqua;
+  background-color: rgb(17, 0, 255);
   height: 219px;
   width: 161px;
   margin: 23px;
+
 }
 
 .TodoItem-section > p{
   background-color: rgb(245, 248, 248);
  
 }
+.TodoItem-image {
+  max-width: 219px;
+  height: 143px;
+  border-color: black;
+  background-repeat: repeat;
+  border-radius: 5px;
+}
+
 
 

@@ -1,11 +1,27 @@
 import React  from "react";
 
 function TodoItem(props){
-    
-    
+
+    let userInterest = props.interest; 
+
+    const userBackgroundColor = {
+        backgroundColor: '#F8F8FF'
+    } 
+
+    if(userInterest === 'Nintendo') {
+        userBackgroundColor.backgroundColor = 'red'
+    } else if(userInterest === 'Playstation') {
+        userBackgroundColor.backgroundColor = 'blue'   
+    } else if(userInterest === 'Xbox') {
+        userBackgroundColor.backgroundColor = 'green'
+    }
+
+
     return(
 
-        <section className="TodoItem-section">
+        <section className='TodoItem-section'
+        style={userBackgroundColor}
+        > 
             <span 
             className='Todoitem-span Todoitem-span2'
             onClick={props.onComplete}
@@ -14,15 +30,14 @@ function TodoItem(props){
             <p>
               {props.text}
             </p>
-
-            
-
-        <img src={props.image} alt="UserImage"></img>
+            <img className="TodoItem-image" src={props.image} alt="UserImage"></img>
 
         </section>
-            
+        
 
     )
+
+
 }
 
 export {TodoItem};
