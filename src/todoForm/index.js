@@ -6,13 +6,21 @@ function TodoForm(){
     const {addTodos,setOpenModal} = React.useContext(TodoContext)
     const [interest,setInterest] = React.useState('Otros')
     const [image,setImage] = React.useState('')
+    const [opinion, setOpinion] = React.useState('')
+    const [category, setCategory] = React.useState('Accion')
+
     let userInterest ;
+    let userCategory ;
 
 
 
 
     const onChange = (event) => {
         setNewTodoValue(event.target.value)
+    }
+
+    const setNewOpinion = (event) => {
+        setOpinion(event.target.value)
     }
 
     const onCancel = () => {
@@ -37,7 +45,7 @@ function TodoForm(){
 
     const onSubmit = (event) => {
         event.preventDefault();
-        addTodos(newTodoValue,interest,image)
+        addTodos(newTodoValue,interest,image,opinion,category)
         setOpenModal(false)
 
         console.warn("all data", image)
@@ -54,8 +62,15 @@ function TodoForm(){
                 <textarea 
                     value={newTodoValue}
                     onChange={onChange}
-                    placeholder="Escriba aqui"
+                    placeholder="Titulo del juego"
                 />
+
+                <textarea 
+                    value={opinion}
+                    onChange={setNewOpinion}
+                    placeholder="Opinion del juego"
+                />
+
 
                 <select onChange={(e)=>{
                     userInterest = e.target.value;
@@ -68,6 +83,31 @@ function TodoForm(){
                     
                 </select>
 
+                <select onChange={(e)=>{
+                    userCategory = e.target.value;
+                    setCategory(userCategory)
+                   
+                }}>
+                    <option value='Accion'selected>Accion</option>
+                    <option value='Aventura' >Aventura</option>
+                    <option value='Battle Royale'>Battle Royale</option>
+                    <option value='Carreras'>Carreras</option>
+                    <option value='Deportes'>Deportes</option>
+                    <option value='Shooting'>Shooting</option>
+                    <option value='Estrategia'>Estrategia</option>
+                    <option value='Multiplayer'>Multiplayer</option>
+                    <option value='RPG'>RPG</option>
+                    <option value='ROL'>ROL</option>
+                    <option value='Sigilo'>Sigilo</option>
+                    <option value='Simulacion'>Simulacion</option>
+                    <option value='Supervivencia'>Supervivencia</option>
+                    <option value='Terror'>Terror</option>
+                    <option value='Sandbox'>Sandbox</option>
+                    <option value='Survival horror'>Survival horror</option>
+                    <option value='Old school'>Old school</option>
+                    
+                </select>
+
                 <input 
                     value={image} 
                     placeholder="ej https://image.api.playstation.com/vulcan/ap/rnd/202008/1318/8XGEPtD1xoasK0FYkYNcCn1z.png" 
@@ -76,6 +116,8 @@ function TodoForm(){
                     setImage(newGameImage) }
                 }> 
                 </input>
+
+
 
                 <div>
                     <button

@@ -6,6 +6,7 @@ import { TodoSearch } from '../TodoSearch';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { TodoContext } from '../TodoContext'
 import {TodoForm} from '../todoForm'
+import {LastTodo} from '../LastTodo'
 import {Modal} from '../modal'
 
 
@@ -20,6 +21,12 @@ function AppUI() {
         openModal,
         setOpenModal
     } = React.useContext(TodoContext)
+
+
+    let LastElement = searchedTodos.length - 1;
+    let showLastTodo = searchedTodos[LastElement]
+    console.log(showLastTodo)
+
     
 
     return (
@@ -36,11 +43,26 @@ function AppUI() {
                 image={todo.image}
                 key={todo.text}
                 text={todo.text}
+                opinion={todo.opinion}
                 completed={todo.completed}
                 onComplete={() => completedTodos(todo.text)}
             />
             ))}
         </TodoList>
+
+       
+        <LastTodo
+            category = {showLastTodo.category}
+            interest={showLastTodo.interest}
+            image={showLastTodo.image}
+            key={showLastTodo.text}
+            text={showLastTodo.text}
+            opinion={showLastTodo.opinion}
+            onComplete={() => completedTodos(showLastTodo.text)}
+        />
+        
+       
+       
 
         <TodoCounter todos={todos} />
 

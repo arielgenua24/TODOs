@@ -1,8 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
@@ -25,16 +24,17 @@ body {
   background-color: azure;
   height: 100%;
   display: flex;
+  justify-content: center;
   flex-direction: initial;
+  width: 100%;
   flex-wrap: wrap;
+  margin: 795px 0px 0px 0px
 }
 
 .TodoItem-section {
-  background-color: rgb(17, 0, 255);
-  height: 219px;
-  width: 161px;
-  margin: 23px;
-
+  height: 260px;
+  width: 238px;
+  margin: 23px
 }
 
 .TodoItem-section > p{
@@ -49,5 +49,61 @@ body {
   border-radius: 5px;
 }
 
+.LastTodo-section {
+  height: 761px;
+  width: 100%;
+  position: absolute;
+  top: 38px;
+}
 
+.LastTodo-image {
+  max-width: 96%;
+  height: 45%;
+  border-color: black;
+  background-repeat: repeat;
+  border-radius: 5px;
+  margin-left: 7px;
+}
 
+.LastTodo-title {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 4px 7px 5px 8px;
+}
+
+.LastTodo-opinion {
+  font-size: 10px;
+  font-weight: 300;
+  padding: 10px 6px 8px 6px;
+}
+
+.LastTodo-titleContainer {
+  background-color: aliceblue;
+  max-width: 49%;
+  margin-left: 14px
+}
+
+.LastTodo-opinionContainer{
+  background-color: rgb(35, 96, 150);
+  width: 63%;
+  height: 181px;
+  margin: 6px 0px 10px 14px;
+}
+
+.lastTodo-p {
+  background-color: aqua;
+  padding: 7px 9px 9px 9px
+}
+
+.lastTodo-categoryContainer{
+  background-color: antiquewhite;
+  width: 37%;
+  height: 29px;
+  margin: 0px 0px 0px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lastTodo-category {
+  background-color: beige;
+}

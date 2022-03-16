@@ -27,7 +27,7 @@ function TodoProvider(props) {
         console.log(searchedTodos)
     }
 
-    const addTodos = (text,interest,image) => {
+    const addTodos = (text,interest,image,opinion,category) => {
         //nos mandaran titulo, categoria, imagen, descricpcion,
         //son 4 categorias
         const newTodos = [...todos]
@@ -35,6 +35,8 @@ function TodoProvider(props) {
             text,
             interest,
             image,
+            opinion,
+            category
         })
         saveTodos(newTodos)
 

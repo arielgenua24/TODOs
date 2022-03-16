@@ -1,5 +1,7 @@
 import React  from "react";
 
+//puedo anadir un: Reciente añadido.
+
 function TodoItem(props){
 
     let userInterest = props.interest; 
@@ -31,6 +33,11 @@ function TodoItem(props){
               {props.text}
             </p>
             <img className="TodoItem-image" src={props.image} alt="UserImage"></img>
+            <p
+             className="Todo-item-opinion"
+            >
+                {props.opinion}
+            </p>
 
         </section>
         
