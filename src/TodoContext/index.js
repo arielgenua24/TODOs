@@ -12,6 +12,7 @@ function TodoProvider(props) {
 
     console.log(parsedItem)
     const [openModal,setOpenModal] = React.useState(false)
+    const [openGameInfo,setOpenGameInfo] = React.useState(false)
     const [searchValue, setSearchValue] = React.useState('')
     let searchedTodos = []
 
@@ -68,7 +69,9 @@ function TodoProvider(props) {
             setSearchValue,
             openModal,
             setOpenModal,
-            addTodos
+            addTodos,
+            openGameInfo,
+            setOpenGameInfo
         }}>
             {props.children}
 

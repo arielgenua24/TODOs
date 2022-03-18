@@ -1,8 +1,26 @@
 import React  from "react";
+import { TodoContext } from "../TodoContext";
+import { MoreInfo } from "../MoreInfo";
+import {GameInform} from '../gameInform'
 
 //puedo anadir un: Reciente añadido.
 
+const gameInform = {
+    text: '',
+    interest: '',
+    opinion: '',
+    category: '',
+    image: '',
+}
+
+
+
 function TodoItem(props){
+    
+
+    const { openGameInfo,
+        setOpenGameInfo} = React.useContext(TodoContext)
+
 
     let userInterest = props.interest; 
 
@@ -18,8 +36,25 @@ function TodoItem(props){
         userBackgroundColor.backgroundColor = 'green'
     }
 
+    const onClickButton = () => {
+        setOpenGameInfo(prevState => !prevState)
+        console.log('3')
+        
+
+        gameInform.text = props.text
+        gameInform.category = props.category
+        gameInform.image = props.image
+        gameInform.interest = props.interest
+        gameInform.opinion = props.opinion
+
+        console.log(gameInform)
+
+    }
+
 
     return(
+
+
 
         <section className='TodoItem-section'
         style={userBackgroundColor}
@@ -39,6 +74,27 @@ function TodoItem(props){
                 {props.opinion}
             </p>
 
+            <button 
+                className="CreateTodoButton"
+                onClick={() => onClickButton()}
+                
+             >
+            Ver mas 
+            </button>
+
+            {!!openGameInfo && 
+            <GameInform>
+                <MoreInfo
+                    category = {props.category}
+                    interest={props.interest}
+                    image={props.image}
+                    key={props.text}
+                    text={props.text}
+                    opinion={props.opinion}
+                />
+            </GameInform>
+        }
+
         </section>
         
 
@@ -47,4 +103,4 @@ function TodoItem(props){
 
 }
 
-export {TodoItem};
+export {TodoItem,gameInform};

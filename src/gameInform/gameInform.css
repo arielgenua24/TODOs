@@ -1,0 +1,7 @@
+.gameInformBackground {
+    background-color: darkolivegreen;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    z-index: 10;
+}

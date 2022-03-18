@@ -10,6 +10,7 @@ import {LastTodo} from '../LastTodo'
 import {Modal} from '../modal'
 
 
+
 function AppUI() {
     
     const {
@@ -19,7 +20,9 @@ function AppUI() {
         searchValue,
         setSearchValue,
         openModal,
-        setOpenModal
+        setOpenModal,
+        openGameInfo,
+        setOpenGameInfo
     } = React.useContext(TodoContext)
 
 
@@ -46,19 +49,21 @@ function AppUI() {
                 opinion={todo.opinion}
                 completed={todo.completed}
                 onComplete={() => completedTodos(todo.text)}
+                openGameInfo={openGameInfo}
+                setOpenGameInfo={setOpenGameInfo}
             />
             ))}
         </TodoList>
 
        
         <LastTodo
-            category = {showLastTodo.category}
-            interest={showLastTodo.interest}
-            image={showLastTodo.image}
-            key={showLastTodo.text}
-            text={showLastTodo.text}
-            opinion={showLastTodo.opinion}
-            onComplete={() => completedTodos(showLastTodo.text)}
+            category = {showLastTodo?.category}
+            interest={showLastTodo?.interest}
+            image={showLastTodo?.image}
+            key={showLastTodo?.text}
+            text={showLastTodo?.text}
+            opinion={showLastTodo?.opinion}
+            onComplete={() => completedTodos(showLastTodo?.text)}
         />
         
        
