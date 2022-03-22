@@ -1,5 +1,6 @@
 import React from "react";
 import {TodoContext} from '../TodoContext'
+import './todoFrom.css'
 
 function TodoForm(){
     const [newTodoValue, setNewTodoValue] = React.useState('')
@@ -8,9 +9,11 @@ function TodoForm(){
     const [image,setImage] = React.useState('')
     const [opinion, setOpinion] = React.useState('')
     const [category, setCategory] = React.useState('Accion')
+    const [choice,setChoice] = React.useState('')
 
     let userInterest ;
     let userCategory ;
+    let userChoice;
 
 
 
@@ -45,7 +48,7 @@ function TodoForm(){
 
     const onSubmit = (event) => {
         event.preventDefault();
-        addTodos(newTodoValue,interest,image,opinion,category)
+        addTodos(newTodoValue,interest,image,opinion,category,choice)
         setOpenModal(false)
 
         console.warn("all data", image)
@@ -56,23 +59,27 @@ function TodoForm(){
 
     return (
         <>
-            <form onSubmit={onSubmit}>
+            <form 
+                className="form-1"
+                onSubmit={onSubmit}>
                 <label>...</label>
                 
                 <textarea 
+                    className="form__textArea-1"
                     value={newTodoValue}
                     onChange={onChange}
                     placeholder="Titulo del juego"
                 />
 
                 <textarea 
+                    className="form-textArea-2"
                     value={opinion}
                     onChange={setNewOpinion}
                     placeholder="Opinion del juego"
                 />
 
 
-                <select onChange={(e)=>{
+                <select className="form__select1" onChange={(e)=>{
                     userInterest = e.target.value;
                     setInterest(userInterest);
                 }}>
@@ -83,7 +90,9 @@ function TodoForm(){
                     
                 </select>
 
-                <select onChange={(e)=>{
+               
+
+                <select className="form-select2" onChange={(e)=>{
                     userCategory = e.target.value;
                     setCategory(userCategory)
                    
@@ -108,7 +117,18 @@ function TodoForm(){
                     
                 </select>
 
-                <input 
+                <select className="form__select3" onChange={(e)=>{
+                    userChoice = e.target.value;
+                    setChoice(userChoice);
+                }}>
+                    <option value='Debo jugar'selected>Debo jugar</option>
+                    <option value='Jugados' >Jugados</option>
+
+                </select>
+
+
+                <input
+                    className="form_input1" 
                     value={image} 
                     placeholder="ej https://image.api.playstation.com/vulcan/ap/rnd/202008/1318/8XGEPtD1xoasK0FYkYNcCn1z.png" 
                     onChange={(e)=>
@@ -119,14 +139,16 @@ function TodoForm(){
 
 
 
-                <div>
+                <div className="div_buttons">
                     <button
-                        type="button"
-                        onCancel={onCancel}
+                        className="button__cancelar"
+                        type="submit"
+                        onClick={onCancel}
                     >
                         cancelar
                     </button>
                     <button
+                        className="button__submit"
                         type="submit"
                     >
                         

@@ -67,12 +67,20 @@ function TodoItem(props){
             <p>
               {props.text}
             </p>
+
+            <span>
+                {props.choice}
+            </span>
+
             <img className="TodoItem-image" src={props.image} alt="UserImage"></img>
             <p
              className="Todo-item-opinion"
             >
                 {props.opinion}
             </p>
+
+
+
 
             <button 
                 className="CreateTodoButton"

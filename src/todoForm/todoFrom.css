@@ -1,0 +1,76 @@
+
+
+
+.form-1 {
+    display: flex;
+    height: 90vh;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    background: #1A1A40;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form-1 > textarea, .form-1 > select, .form-1 > input {
+    width: 70%;
+    height: 40px;
+    border-style: none;
+    background-color: #270082;
+    color: #f1f1f1;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 17px;
+    border-bottom: 3px solid #7218e2;
+}
+
+.form__textArea-1 {
+    background-color: aliceblue;
+}
+
+.form-textArea-2 {
+    background-color: rgb(88, 154, 212);
+}
+
+.form__select1 {
+    background-color: rgb(90, 187, 51);
+}
+
+.form-select2 {
+    background-color: blueviolet;
+}
+
+.form_input1 {
+    background-color: bisque;
+}
+
+.div_buttons {
+    width: 80%;
+    height: 102px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button__cancelar {
+	background-color: #1a1a40;
+	width: 113px;
+	height: 56px;
+	border: 2px solid #7218e2;
+	color: #d7d2e3;
+	border-radius: 19px;
+	font-size: 17px;
+}
+
+.button__submit {
+	background-color: #dfcff3;
+	/* width: 113px; */
+	/* height: 56px; */
+	/* background-color: #1a1a40; */
+	width: 113px;
+	height: 56px;
+	border: 2px solid #7218e2;
+	color: #1a1a40;
+	border-radius: 19px;
+	font-size: 17px;
+}

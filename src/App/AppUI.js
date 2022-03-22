@@ -42,6 +42,7 @@ function AppUI() {
         <TodoList>     
             {searchedTodos?.map(todo => (
             <TodoItem
+                choice = {searchedTodos.choice}
                 interest={todo.interest}
                 image={todo.image}
                 key={todo.text}
@@ -57,6 +58,7 @@ function AppUI() {
 
        
         <LastTodo
+            choice = {showLastTodo?.choice}
             category = {showLastTodo?.category}
             interest={showLastTodo?.interest}
             image={showLastTodo?.image}
