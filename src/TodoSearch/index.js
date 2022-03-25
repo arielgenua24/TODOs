@@ -18,7 +18,6 @@ function TodoSearch() {
         
          <section className="section__search">
             <span className="section__span">
-                Busca titulos de manera rapida
             </span>
 
             <input 
@@ -26,7 +25,7 @@ function TodoSearch() {
             placeholder="Cebolla"
             onChange={onSearchValue} 
             
-            />,
+            />
 
             <p>{searchValue}</p>
          </section>

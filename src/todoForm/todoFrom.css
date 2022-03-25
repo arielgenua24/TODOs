@@ -2,7 +2,8 @@
 
 
 .form-1 {
-    top: 159px;
+    /* top: 65%; */
+    bottom: 1px;
     display: flex;
     /* height: 875px; */
     justify-content: space-between;
@@ -16,6 +17,8 @@
     position: fixed;
     z-index: 10;
     height: 551px;
+    width: 100vw;
+   
 }
 
 .form-1 > textarea, .form-1 > select, .form-1 > input {

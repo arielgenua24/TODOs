@@ -51,7 +51,8 @@ function MoreInfo(props) {
             <span 
             className='moreInfo-span moreInfo-span2'
             onClick={props.onComplete}
-            >c
+            >
+                
             </span>
             
 

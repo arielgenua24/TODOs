@@ -20,6 +20,10 @@ body {
 }
 
 
+.Todoitem-span2 {
+  color: #fdfdff;
+}
+
 .todoList-section {
   background-color: #1a1a40;
   height: 100%;
@@ -64,7 +68,7 @@ body {
   position: absolute;
   top: 38px;
   z-index: 1;
-  filter: blur(8px);
+  filter: blur(14px);
   -webkit-filter: blur(8px);
   /* opacity: 50%; */
 }

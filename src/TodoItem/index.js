@@ -65,7 +65,8 @@ function TodoItem(props){
             <span 
             className='Todoitem-span Todoitem-span2'
             onClick={props.onComplete}
-            >c
+            >
+                Borrar
             </span>
             <p className="section__p--title">
               {props.text}
