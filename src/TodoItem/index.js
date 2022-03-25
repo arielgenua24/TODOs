@@ -25,13 +25,16 @@ function TodoItem(props){
     let userInterest = props.interest; 
 
     const userBackgroundColor = {
-        backgroundColor: '#F8F8FF'
+        backgroundColor: '#F8F8FF',
+        background: ''
     } 
 
     if(userInterest === 'Nintendo') {
         userBackgroundColor.backgroundColor = 'red'
+        userBackgroundColor.background = 'linear-gradient(292deg, rgba(25,28,25,1) 0%, rgba(30,81,40,1) 67%, rgb(81 148 67) 100%)'
     } else if(userInterest === 'Playstation') {
         userBackgroundColor.backgroundColor = 'blue'   
+        
     } else if(userInterest === 'Xbox') {
         userBackgroundColor.backgroundColor = 'green'
     }
@@ -64,26 +67,35 @@ function TodoItem(props){
             onClick={props.onComplete}
             >c
             </span>
-            <p>
+            <p className="section__p--title">
               {props.text}
             </p>
+
+            <span className="section__span--interest">
+                {props.interest}
+            </span>
+
+            <span className="section__span--category">
+                {props.category}
+            </span>
+            
 
             <span>
                 {props.choice}
             </span>
 
             <img className="TodoItem-image" src={props.image} alt="UserImage"></img>
-            <p
+            {/*<p
              className="Todo-item-opinion"
             >
                 {props.opinion}
-            </p>
+            </p> */}
 
 
 
 
             <button 
-                className="CreateTodoButton"
+                className="seeMoreButton"
                 onClick={() => onClickButton()}
                 
              >
@@ -93,12 +105,6 @@ function TodoItem(props){
             {!!openGameInfo && 
             <GameInform>
                 <MoreInfo
-                    category = {props.category}
-                    interest={props.interest}
-                    image={props.image}
-                    key={props.text}
-                    text={props.text}
-                    opinion={props.opinion}
                 />
             </GameInform>
         }

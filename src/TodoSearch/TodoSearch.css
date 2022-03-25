@@ -1,0 +1,22 @@
+.section__search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 62px;
+    width: 100%;
+    top: 1px;
+    position: relative;
+    background-color: #357bb9;
+    z-index: 4;
+
+}
+
+.section__span{
+    background-color: azure;
+    width: 30%;
+    height: 32px;
+}
+
+.section__input {
+    background-color: azure;
+}

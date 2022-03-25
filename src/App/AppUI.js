@@ -34,6 +34,12 @@ function AppUI() {
 
     return (
     <>
+        <TodoSearch 
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+        />
+
+
         <CreateTodoButton
             setOpenModal={setOpenModal}
             openModal={openModal}
@@ -45,6 +51,7 @@ function AppUI() {
                 choice = {searchedTodos.choice}
                 interest={todo.interest}
                 image={todo.image}
+                category = {todo.category}
                 key={todo.text}
                 text={todo.text}
                 opinion={todo.opinion}
@@ -69,14 +76,9 @@ function AppUI() {
         />
         
        
-       
+    
 
-        <TodoCounter todos={todos} />
-
-        <TodoSearch 
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
-        />
+        
 
         {!!openModal && 
             <Modal>
@@ -84,6 +86,10 @@ function AppUI() {
                 />
             </Modal>
         }
+
+        
+
+
 
 
 

@@ -64,12 +64,20 @@ function TodoForm(){
                 onSubmit={onSubmit}>
                 <label>...</label>
                 
+                <span className="from__span--gameTitle form__span--tips">
+                    Titulo del juego.
+                </span>
+
                 <textarea 
                     className="form__textArea-1"
                     value={newTodoValue}
                     onChange={onChange}
                     placeholder="Titulo del juego"
                 />
+
+                <span className="from__span--opinion form__span--tips">
+                    Opinion/Por que debedrias jugarlo.
+                </span>
 
                 <textarea 
                     className="form-textArea-2"
@@ -78,6 +86,9 @@ function TodoForm(){
                     placeholder="Opinion del juego"
                 />
 
+                <span className="from__span--interest form__span--tips">
+                    Exclusividad.
+                </span>
 
                 <select className="form__select1" onChange={(e)=>{
                     userInterest = e.target.value;
@@ -90,7 +101,9 @@ function TodoForm(){
                     
                 </select>
 
-               
+                <span className="from__span--category form__span--tips">
+                    Categoria.
+                </span>
 
                 <select className="form-select2" onChange={(e)=>{
                     userCategory = e.target.value;
@@ -117,6 +130,10 @@ function TodoForm(){
                     
                 </select>
 
+                <span className="from__span--choice form__span--tips">
+                    Debes jugar/Jugado
+                </span>
+
                 <select className="form__select3" onChange={(e)=>{
                     userChoice = e.target.value;
                     setChoice(userChoice);
@@ -127,6 +144,9 @@ function TodoForm(){
                 </select>
 
 
+                <span className="from__span--image form__span--tips">
+                    Imagen del videojuego
+                </span>                
                 <input
                     className="form_input1" 
                     value={image} 
@@ -136,6 +156,25 @@ function TodoForm(){
                     setImage(newGameImage) }
                 }> 
                 </input>
+
+                <span className="span__image--tip form__span--tips">
+                    Tip para agregar la imagen: <br/>
+                    <br/>
+                    1-Entre a google y busque el videojuego que le gusta <br/>
+                    <br/>
+                    2-Entre a una imagen de su videojuego <br/>
+                    <br/>
+                    3-Mantenga el dedo sobre la imagen y saldra una venta<br/>
+                    <br/>
+                    4-En esa ventana toque en "Copiar imagen"<br/>
+                    <br/>
+                    5-Vuelva a esta app<br/>
+                    <br/>
+                    6-mantenga pulsado sobre la barra de abajo<br/>
+                    <br/>
+                    7-pegue la imagen<br/>
+                    <br/>
+                </span>
 
 
 

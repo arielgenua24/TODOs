@@ -5,19 +5,31 @@ function LastTodo(props) {
     let userInterest = props.interest; 
 
     const userBackgroundColor = {
-        backgroundColor: '#F8F8FF'
+        backgroundColor: '#F8F8FF',
+        background: '',
+        backgroundBlendMode: 'overlay, lighten, overlay, color-burn, normal'
+
     } 
 
     if(userInterest === 'Nintendo') {
         userBackgroundColor.backgroundColor = 'red'
+        
     } else if(userInterest === 'Playstation') {
         userBackgroundColor.backgroundColor = 'blue'   
     } else if(userInterest === 'Xbox') {
-        userBackgroundColor.backgroundColor = 'green'
+        userBackgroundColor.background = 'linear-gradient(301deg, rgba(25,28,25,1) 0%, rgba(30,81,40,1) 67%, rgba(78,159,61,1) 100%)'
+        
     }
 
 
     return(
+        <>
+        
+        
+        <img className="lastTodo-backgroundImage" src={props.image} alt="UserImage"></img>
+        
+        <section className="LastTodo-blurEffect">
+        </section>
 
         <section className='LastTodo-section'
         style={userBackgroundColor}
@@ -56,7 +68,7 @@ function LastTodo(props) {
 
         </section>
         
-
+        </>
     )
 
 }

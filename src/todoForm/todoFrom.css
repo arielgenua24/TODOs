@@ -2,8 +2,9 @@
 
 
 .form-1 {
+    top: 159px;
     display: flex;
-    height: 90vh;
+    /* height: 875px; */
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
@@ -11,6 +12,10 @@
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: scroll;
+    position: fixed;
+    z-index: 10;
+    height: 551px;
 }
 
 .form-1 > textarea, .form-1 > select, .form-1 > input {
@@ -23,6 +28,8 @@
     font-weight: 500;
     font-size: 17px;
     border-bottom: 3px solid #7218e2;
+    padding: 15px 0px 15px 0px;
+    margin: 14px 0px 47px 0px;
 }
 
 .form__textArea-1 {
@@ -73,4 +80,49 @@
 	color: #1a1a40;
 	border-radius: 19px;
 	font-size: 17px;
+}
+
+.from__span--gameTitle {
+    background-color: #1A1A40;
+}
+
+.from__span--opinion {
+    background-color: #1A1A40;
+
+}
+
+.from__span--interest {
+    background-color: #1A1A40;
+
+}
+
+.from__span--category {
+    background-color: #1A1A40;
+
+}
+
+.from__span--choice {
+    background-color: #1A1A40;
+
+}
+
+.from__span--image {
+    background-color: #1A1A40;
+
+}
+
+.form__span--tips {
+    margin: 0px 27px 14px 27px;
+    color: #f1f1f1;
+    font-size: 15px;
+}
+
+
+.span__image--tip {
+    background-color: #2c0489;
+    margin: -29px 23px 34px 18px;
+    padding: 10px;
+    border-radius: 19px;
+    border: 2px solid #645aa2;
+    font-size: 15px;
 }

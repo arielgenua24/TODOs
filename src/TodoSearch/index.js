@@ -1,5 +1,6 @@
 import React from 'react';
 import { TodoContext } from '../TodoContext';
+import './TodoSearch.css'
 
 function TodoSearch() {
 
@@ -13,13 +14,25 @@ function TodoSearch() {
 
 
     return[
-        <input 
-          placeholder="Cebolla"
-          onChange={onSearchValue} 
+        <>
         
-        />,
+         <section className="section__search">
+            <span className="section__span">
+                Busca titulos de manera rapida
+            </span>
 
-        <p>{searchValue}</p>
+            <input 
+            className="section__input"
+            placeholder="Cebolla"
+            onChange={onSearchValue} 
+            
+            />,
+
+            <p>{searchValue}</p>
+         </section>
+            
+
+       </>
     ]
 };
 
